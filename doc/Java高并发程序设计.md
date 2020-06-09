@@ -20,7 +20,7 @@
 - 预计18个月会将芯片的性能提高一倍
 - IntelCEOBarret单膝下跪对4GHz感到抱歉
 
-![image-20200607111038983](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607111038983.png)
+![image-20200607111038983](.\md-images\image-20200607111038983.png)
 
  - 在2004年秋季，Intel宣布彻底取消4GHz计划
 
@@ -32,16 +32,16 @@
 
 #### 同步（synchronous）和异步（asynchronous）
 
-![image-20200607111241692](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607111241692.png)
+![image-20200607111241692](.\md-images\image-20200607111241692.png)
 
 #### 并发（Concurrentcy）和并行（Parallelism）
 
-![image-20200607111330802](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607111330802.png)
+![image-20200607111330802](.\md-images\image-20200607111330802.png)
 
 #### 临界区
 - 临界区用来表示一种公共资源或者说是共享数据，可以被多个线程使用。但是每一次，只能有一个线程使用它，一旦临界区资源被占用，其他线程要箱使用这个资源，就必须等待。
 
-![image-20200607111718513](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607111718513.png)
+![image-20200607111718513](.\md-images\image-20200607111718513.png)
 
 #### 阻塞（Blocking）和非阻塞（Non-Blocking）
 - 阻塞和非阻塞通常用来形容多线程间的相互影响。比如一个线程占用了临近区资源，那么其它所有需要这个资源的线程就必须在这个临界区中进行等待，等待会导致线程挂起。这种情况就是阻塞。此时，如果占用资源的线程一直不愿意释放资源，那么其它所有阻塞在这个临界区的线程都不能工作。
@@ -49,7 +49,7 @@
 
 #### 死锁（Deadlock）、饥饿（Starvation）和活锁（Livelock）
 
-![image-20200607112136006](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607112136006.png)
+![image-20200607112136006](.\md-images\image-20200607112136006.png)
 
 #### 并行的级别
 阻塞、无障碍、无锁、无等待，后三种属于非阻塞
@@ -78,11 +78,11 @@ while(!atomicVar.compareAndSet(localVar, localVar+1)) {
 ### 2个重要的定理
 #### Amdahl定律（阿姆达尔定律）
 
-![image-20200607113523319](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607113523319.png)
+![image-20200607113523319](.\md-images\image-20200607113523319.png)
 
 #### Gustafson定律（古斯塔夫森定律）
 
-![image-20200607113756696](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607113756696.png)
+![image-20200607113756696](.\md-images\image-20200607113756696.png)
 
 
 ## 多线程
@@ -91,7 +91,7 @@ while(!atomicVar.compareAndSet(localVar, localVar+1)) {
 - 进程上下文切换时非常重量级操作
 ### 线程的基本操作
 
-![image-20200607115401394](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607115401394.png)**
+![image-20200607115401394](.\md-images\image-20200607115401394.png)**
 
 #### 新建线程
 ```java
@@ -137,7 +137,7 @@ tl.start();
 > 记录1： ID=1, NAME=小明
 > 记录2： ID=2, NAME=小王
 
-![image-20200607120740840](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607120740840.png)
+![image-20200607120740840](.\md-images\image-20200607120740840.png)
 
 #### 中断线程
 ```java
@@ -194,7 +194,7 @@ public void run() {
 - suspend()不会释放锁
 - 如果加锁发生在resume()之前，则死锁发生
 
-![image-20200607122847276](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607122847276.png)
+![image-20200607122847276](.\md-images\image-20200607122847276.png)
 
 > 住：jps命令
 > jstack 线程ID
@@ -248,7 +248,7 @@ high.start();
 - Object.wait()、Object.notify()
 > 调用方法前要获取 Object monitor
 
-![image-20200607130047436](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607130047436.png)
+![image-20200607130047436](.\md-images\image-20200607130047436.png)
 
 > 唤醒当前对象的所有线程上
 
@@ -275,7 +275,7 @@ class OrderExample {
 }
 ```
 
-![image-20200607150525838](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607150525838.png)
+![image-20200607150525838](.\md-images\image-20200607150525838.png)
 
 > 多线程时，实际执行不一定时按照白那些顺序
 
@@ -291,29 +291,29 @@ class OrderExample {
 	- 写回WB
 	
 
-![image-20200607151146235](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607151146235.png)
+![image-20200607151146235](.\md-images\image-20200607151146235.png)
 
-![image-20200607151552000](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607151552000.png)
+![image-20200607151552000](.\md-images\image-20200607151552000.png)
 
-![image-20200607151743630](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607151743630.png)
+![image-20200607151743630](.\md-images\image-20200607151743630.png)
 
-![image-20200607151845858](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607151845858.png)
+![image-20200607151845858](.\md-images\image-20200607151845858.png)
 
 ### 可见性
 - 可见性是指当一个线程修改了某一个共享变量的值，其他线程是否能够立即知道这个修改。
 	- 编译器优化
 	- 硬件优化（如写吸收，批操作）
 
-![image-20200607152126701](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607152126701.png)
+![image-20200607152126701](.\md-images\image-20200607152126701.png)
 
 - Java虚拟机层面的可见性
 	- http://hushi55.github.io/2015/01/05/volatile-assembly
 
 - -server模式运行上述代码，永远不会停止
 
-![image-20200607153025112](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607153025112.png)
+![image-20200607153025112](.\md-images\image-20200607153025112.png)
 
-![image-20200607153140834](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607153140834.png)
+![image-20200607153140834](.\md-images\image-20200607153140834.png)
 
 
 ### Happen-Before规则（先行发生）
@@ -336,7 +336,7 @@ b = a + 1;
 - 指某个函数、函数库在多线程中被调用时，能够正确地处理各个线程的局部变量，使程序功能正确完成。
 > i++在多线程下访问的情况
 
-![image-20200607154317930](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607154317930.png)
+![image-20200607154317930](.\md-images\image-20200607154317930.png)
 
 ```java
 public class AccountingSync implements Runnable {
@@ -425,7 +425,7 @@ public native void putOrderedInt(Object o, long offset, int x);
 ##### 概述
 有唯一标识的引用
 
-![image-20200607163614333](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607163614333.png)
+![image-20200607163614333](.\md-images\image-20200607163614333.png)
 
 ##### 主要接口
 
@@ -451,7 +451,7 @@ public final int getAndAdd(int delta)
 
 > Integer.numberOfLeadingZeros(4)
 
-![image-20200607165013645](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607165013645.png)
+![image-20200607165013645](.\md-images\image-20200607165013645.png)
 
 #### AtomicIntegerFieldUpdater
 ##### 概述
@@ -489,14 +489,14 @@ LockFreeVector
 
 #### CountDownLatch
 
-![image-20200607174133262](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607174133262.png)
+![image-20200607174133262](.\md-images\image-20200607174133262.png)
 
 #### CyclicBarrier
 ##### 概述
 循环栅栏
 Cyclic意为循环，也就是说这个计数器可以反复使用，比如，假设我们将计数器设置为10，那么一批10个线程后，计数器归零，然后接着凑齐下一批10个线程
 
-![image-20200607174624353](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607174624353.png)
+![image-20200607174624353](.\md-images\image-20200607174624353.png)
 
 #### LockSupport
 ##### 概述
@@ -528,7 +528,7 @@ public static Map m = Collections.synchronizedMap(new HashMap())
 高性能并发
 #### BlockingQueue
 
-![image-20200607181732792](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607181732792.png)
+![image-20200607181732792](.\md-images\image-20200607181732792.png)
 
 > 适合生产者消费者模式
 
@@ -543,7 +543,7 @@ public static Map m = Collections.synchronizedMap(new HashMap())
 	- 线程服用
 #### JDK为我们提供了哪些支持
 
-![image-20200607183312906](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607183312906.png)
+![image-20200607183312906](.\md-images\image-20200607183312906.png)
 
 
 #### 线程池的使用
@@ -568,7 +568,7 @@ newScheduledThreadPool
 ### ForkJoin
 #### 思想
 
-![image-20200607190004178](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607190004178.png)
+![image-20200607190004178](.\md-images\image-20200607190004178.png)
 
 #### 使用接口
 - RecursiveAction
@@ -582,16 +582,16 @@ newScheduledThreadPool
 #### 实现要素
 - 工作窃取
 
-![image-20200607191520449](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607191520449.png)
+![image-20200607191520449](.\md-images\image-20200607191520449.png)
 
-![image-20200607191430596](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607191430596.png)
+![image-20200607191430596](.\md-images\image-20200607191430596.png)
 
 ## 并行设计模式
 ### 什么是设计模式
 
-![image-20200607193350565](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607193350565.png)
+![image-20200607193350565](.\md-images\image-20200607193350565.png)
 
-![image-20200607193517036](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607193517036.png)
+![image-20200607193517036](.\md-images\image-20200607193517036.png)
 
 
 
@@ -599,27 +599,27 @@ newScheduledThreadPool
 
 ### 单例模式
 
-![image-20200607193657422](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607193657422.png)
+![image-20200607193657422](.\md-images\image-20200607193657422.png)
 
 
 
 
 
-![image-20200607193718637](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607193718637.png)
+![image-20200607193718637](.\md-images\image-20200607193718637.png)
 
-![image-20200607193813874](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607193813874.png)
+![image-20200607193813874](.\md-images\image-20200607193813874.png)
 
-![image-20200607193916708](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607193916708.png)
+![image-20200607193916708](.\md-images\image-20200607193916708.png)
 
-![image-20200607193943808](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607193943808.png)
+![image-20200607193943808](.\md-images\image-20200607193943808.png)
 
 ### 不变模式
 
-![image-20200607194054581](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607194054581.png)
+![image-20200607194054581](.\md-images\image-20200607194054581.png)
 
-![image-20200607194150281](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607194150281.png)
+![image-20200607194150281](.\md-images\image-20200607194150281.png)
 
-![image-20200607194327506](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607194327506.png)
+![image-20200607194327506](.\md-images\image-20200607194327506.png)
 
 
 
@@ -629,29 +629,29 @@ newScheduledThreadPool
 
 ### Future模式
 
-![image-20200607194523178](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607194523178.png)
+![image-20200607194523178](.\md-images\image-20200607194523178.png)
 
-![image-20200607194733531](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607194733531.png)
+![image-20200607194733531](.\md-images\image-20200607194733531.png)
 
-![image-20200607194840697](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607194840697.png)
+![image-20200607194840697](.\md-images\image-20200607194840697.png)
 
-![image-20200607195005333](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607195005333.png)
+![image-20200607195005333](.\md-images\image-20200607195005333.png)
 
-![image-20200607195048615](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607195048615.png)
+![image-20200607195048615](.\md-images\image-20200607195048615.png)
 
-<img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607195125475.png" alt="image-20200607195125475" style="zoom:80%;" />
+<img src=".\md-images\image-20200607195125475.png" alt="image-20200607195125475" style="zoom:80%;" />
 
-![image-20200607195306717](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607195306717.png)
+![image-20200607195306717](.\md-images\image-20200607195306717.png)
 
-![image-20200607195326506](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607195326506.png)
+![image-20200607195326506](.\md-images\image-20200607195326506.png)
 
-![image-20200607195422726](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607195422726.png)
+![image-20200607195422726](.\md-images\image-20200607195422726.png)
 
 
 
 ### 生产者消费者
 
-![image-20200607195450441](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200607195450441.png)
+![image-20200607195450441](.\md-images\image-20200607195450441.png)
 
 
 
