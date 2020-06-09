@@ -91,7 +91,7 @@ while(!atomicVar.compareAndSet(localVar, localVar+1)) {
 - 进程上下文切换时非常重量级操作
 ### 线程的基本操作
 
-![image-20200607115401394](.\md-images\image-20200607115401394.png)**
+![image-20200607115401394](.\md-images\image-20200607115401394.png)
 
 #### 新建线程
 ```java
