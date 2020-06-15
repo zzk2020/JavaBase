@@ -1,3 +1,5 @@
+[TOC]
+
 # Java高并发程序设计
 ## 并行
 ### 为什么需要并行
@@ -400,6 +402,7 @@ public final int addAndGet(int var1) // 当前值加var1，返回新值
 park()
 底层的CAS操作
 非公开的API，在不同版本的JDK中，可能有较大差异
+
 ##### 主要接口
 ```java
 // 获取给定对象偏移量上的int值
