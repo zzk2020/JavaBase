@@ -69,6 +69,94 @@ public class JavaBook {
 
 
 
+## 开闭原则的示例
+
+```java
+/**
+ * 商品接口
+ */
+public interface IGoods {
+
+    long getId();
+
+    String getName();
+
+    double getPrice();
+
+}
+```
+
+```java
+/**
+ * Java图书
+ */
+public class JavaBook implements IGoods {
+
+    private long id;
+
+    private String name;
+
+    private double price;
+
+    public JavaBook(long id, String name, double price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+
+    @Override
+    public long getId() {
+        return id;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+}
+```
+
+```java
+// 打折
+public class JavaBookDiscount extends JavaBook {
+
+    public JavaBookDiscount(long id, String name, double price) {
+        super(id, name, price);
+    }
+
+    public double getOriginPrice() {
+        return super.getPrice();
+    }
+
+    public double getPrice() {
+        return super.getPrice() * 0.6;
+    }
+}
+```
+
+
+
+
+
+
+
 # 3、依赖倒置原则
 
 依赖倒置原则（Dependence Inversion Principle，DIP）是指设计代码时，高层模块不应该依赖底层模块，二者应该依赖其抽象。抽象不应该依赖细节，细节应该依赖抽象。
@@ -425,98 +513,6 @@ public class ClassB {
 }
 
 ```
-
-
-
-
-
-## 开闭原则的示例
-
-```java
-/**
- * 商品接口
- */
-public interface IGoods {
-
-    long getId();
-
-    String getName();
-
-    double getPrice();
-
-}
-```
-
-```java
-/**
- * Java图书
- */
-public class JavaBook implements IGoods {
-
-    private long id;
-
-    private String name;
-
-    private double price;
-
-    public JavaBook(long id, String name, double price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-    }
-
-    @Override
-    public long getId() {
-        return id;
-    }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public double getPrice() {
-        return price;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-}
-```
-
-```java
-// 打折
-public class JavaBookDiscount extends JavaBook {
-
-    public JavaBookDiscount(long id, String name, double price) {
-        super(id, name, price);
-    }
-
-    public double getOriginPrice() {
-        return super.getPrice();
-    }
-
-    public double getPrice() {
-        return super.getPrice() * 0.6;
-    }
-}
-```
-
-
-
-
-
-
 
 
 
